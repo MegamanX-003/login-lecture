@@ -21,8 +21,15 @@ const process = {
     login: (req, res) => {
         const users = new User(req.body);
         const response = users.login();
-        console.log(response);
+        // console.log(response);
         return res.json(response);
+    },
+
+    register: (req, res) => {
+        const users = new User(req.body);
+        const response = users.register();
+        // console.log(response);
+        return res.json(response);       
     },
 };
 
